@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://emojipedia-us.s3.amazonaws.com/cache/09/2d/092d345bb9c2e95d399638d3e002a5ee.png">
+
+    <title>Lunch | {% block title %}Decide Where to Eat!{% endblock %}</title>
+
+   <link type="text/css" rel="stylesheet" href="{% static 'bootstrap/bootstrap.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'bootstrap/jumbotron.css' %}">
+    <link href="{% static 'bootstrap/footer.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'index-view' %}">Lunch</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          	<li><a href="{% url 'index-view' %}">Decide Where to Eat!</a></li>
+          </ul>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+
+    {% block body_block %}{% endblock %}
+
+
+      
+<div class="container">
+<hr>
+      <footer>
+        <p>&copy; Site by Daniel</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="{% static 'bootstrap/ajaxjq.js' %}" type="text/javascript"></script>
+    <script src="{% static 'bootstrap/getbootstrap.js' %}" type="text/javascript"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'bootstrap/getbootstrapbug.js' %}" type="text/javascript"></script>
+    
+  </body>
+</html>
